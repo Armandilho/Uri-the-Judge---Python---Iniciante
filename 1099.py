@@ -1,13 +1,11 @@
+quantvezes = int(input())
 i = 0
-N = int(input())
 
-while(i < N):
-    entrada = input().split()
-    entradax, entraday = [int(numero) for numero in entrada]
-
+while(i < quantvezes):
+    XeY = input().split()
+    entradax, entraday = [int(x) for x in XeY]
     somadorx = 0
     somadory = 0
-
     if(entradax < entraday):
         if(entradax % 2 == 0):
             entradax = entradax + 1
@@ -31,8 +29,6 @@ while(i < N):
             while(entradax > entraday):
                 somadorx = somadorx + entradax
                 entradax = entradax - 2
-
-
+                
     print("{0}".format(somadorx + somadory))
-    
-    i += 1
+    i = i + 1
